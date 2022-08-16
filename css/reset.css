@@ -1,0 +1,5 @@
+/*初始化各个浏览器不同属性 进行css初始化 避免受到浏览器默认样式的影响*/
+html, body,ul{
+    margin:0px;
+    padding:0px;
+}

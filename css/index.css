@@ -1,0 +1,35 @@
+/*页面元素级的、逻辑级的样式*/
+.nav{
+    height:30px;
+    background-color: #e3e4e5;
+    border-bottom:1px solid #ddd;
+}
+.nav-box{
+    width:1190px;
+    margin:0px auto;
+    text-align:right;
+}
+.nav-box ul li{
+    display: inline-block;
+    /*子绝父相 父级要占有位置，子级要随意摆放 固定定位、决定定位脱离文档流，不占据空间，相对定位不脱离文档流，占据原始空间*/
+    position:relative;
+    line-height: 30px;
+    font-size:12px;
+    padding:0px 10px;
+}
+.nav-box ul li a{
+    color:#999;
+    text-decoration:none;
+}
+.nav-box ul li:not(:last-child):after{/*伪类元素默认为行内元素，设置了绝对定位的元素，会变成块级元素，形成BFC*/
+    content:"";
+    position:absolute;
+    right:0px;/*若不设置right,浏览器有默认的移动像素*/
+    top:8px;
+    height: 14px;
+    width: 1px;
+    background-color: #999;
+}
+.nav-box ul li a:hover{
+    color:#e33333;
+}
